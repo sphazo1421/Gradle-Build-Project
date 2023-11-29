@@ -1,11 +1,14 @@
+import com.example.gradle.JarCount
 
-
-    plugins {
+plugins {
         id("application")
         id("my-java-base")
     }
 
-    tasks.register<JarCount>("countJars"){
+    tasks.register<JarCount>("countJars") {
+        group = "My Group"
+        description = "Counts!"
+
         allJars.from(tasks.jar)
         allJars.from(configurations.runtimeClasspath)
 

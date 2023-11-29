@@ -3,6 +3,7 @@
     plugins {
         id("java")
         id("com.diffplug.spotless")
+        // id("com.autonomousapps.dependency-analysis")
     }
 
     java {
@@ -12,6 +13,8 @@
     tasks.withType<JavaCompile>().configureEach {
         options.encoding = "UTF-8"
     }
+
+
 
 
     tasks.test {
